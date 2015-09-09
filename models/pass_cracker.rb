@@ -40,7 +40,7 @@ class PassCracker
     attempt_hash = WordList.hash_this_ phrase
 
     if self.cracked?(attempt_hash, target_hash)
-      puts "Cracked!"
+      puts "Cracked password in #{num_tries}"
       puts "The password is #{phrase}"
       true
     else
@@ -61,12 +61,12 @@ class PassCracker
   end
 
   def report_still_working
-    message = "Attempt no. #{@num_tries} to crack password..."
+    message = "#{@num_tries} attempts to crack password, no luck..."
     puts message if (@num_tries % @report_every).eql? 0
   end
 
   def report_not_cracked(phrase)
-    puts "Tried #{phrase}, not a match. Still trying to crack..."
+    puts "Try no. #{@num_tries} | #{phrase} | NO MATCH"
   end
 
 end
