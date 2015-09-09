@@ -3,6 +3,7 @@ GEM
   specs:
     curses (1.0.1)
     gentle_brute (0.0.2)
+    minitest (5.7.0)
     slop (4.1.0)
 
 PLATFORMS
@@ -11,4 +12,5 @@ PLATFORMS
 DEPENDENCIES
   curses
   gentle_brute
+  minitest
   slop
