@@ -14,7 +14,7 @@ $ bundle install
 ```
 Crack Test Password
 ```
-$ ruby simple_pass_cracker.rb [password hash]
+$ ruby simple_pass_cracker.rb [password]
 ```
 Test Gentle Brute:
 ```
@@ -27,3 +27,8 @@ Encryption vs. Hashing
 ----------------------
 
 I creates a notes file on the fundamental differences between **encryption, hashing and encoding**. Check it out [here.](https://github.com/rskelley9/simple_brute_force/blob/master/encoding_vs_encryption_vs_hashing.txt)
+
+To-do List
+----------
+
+* Add gitignore file to remove IDE files from tracking
