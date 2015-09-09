@@ -4,9 +4,9 @@ require 'gentle_brute'
 class PassCracker
 
   def initialize(wordlist=WordList.new, report_every=10)
-    self.num_tries = 0
-    self.wordlist = wordlist
-    self.report_every = report_every
+    @num_tries = 0
+    @word_list = wordlist
+    @report_every = report_every
   end
 
   def crack!(target_hash)
@@ -18,20 +18,20 @@ class PassCracker
       self.report_still_working
 
       ## Use a word from word list to test
-      phrase = self.word_list.next_valid_phrase
+      phrase = @word_list.return_phrase
 
       ## If the hashes match, print the unhashed phrase (password)
       break if self.successfully_cracked?(phrase, target_hash)
 
       # After each loop, report progress
-      self.report_not_cracked
+      self.report_not_cracked(phrase)
     end
 
   end
 
   def reset!
-    self.num_tries = 0
-    self.wordlist =  WordList.new
+    @num_tries = 0
+    @word_list =  WordList.new
   end
 
   def successfully_cracked?(phrase, target_hash)
@@ -49,7 +49,7 @@ class PassCracker
   end
 
   def try_a_word
-    self.num_tries += 1
+    @num_tries += 1
   end
 
   def set_auto_report_interval! number
@@ -61,8 +61,8 @@ class PassCracker
   end
 
   def report_still_working
-    message = "Attempt no. #{self.num_tries} to crack password..."
-    puts message if (self.num_tries % self.report_every).eql? 0
+    message = "Attempt no. #{@num_tries} to crack password..."
+    puts message if (@num_tries % @report_every).eql? 0
   end
 
   def report_not_cracked(phrase)

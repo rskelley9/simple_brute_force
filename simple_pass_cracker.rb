@@ -3,6 +3,9 @@
 require 'digest/md5'
 require 'gentle_brute'
 
+# require all models
+Dir["./models/*.rb"].each {|file| require file }
+
 ## Example
 
 # Set default password and hash it if user doesn't enter one
@@ -12,13 +15,10 @@ else
   target_hash = Digest::MD5.hexdigest("axel")
 end
 
-word_list = GentleBrute::BruteForcer.new
+word_list = WordList.new
 
 # pass a custom wordlist into the PassCracker (optional)
 password_cracker = PassCracker.new(word_list)
 
 # crack the hashed password
 password_cracker.crack!(target_hash)
-
-
-end
