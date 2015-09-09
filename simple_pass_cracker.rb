@@ -17,8 +17,8 @@ end
 
 word_list = WordList.new
 
-# pass a custom wordlist into the PassCracker (optional)
+# Pass a custom wordlist into the PassCracker (optional)
 password_cracker = PassCracker.new(word_list)
 
-# crack the hashed password
+# Crack the hashed password
 password_cracker.crack!(target_hash)

@@ -7,12 +7,16 @@ class PassCracker
     @num_tries = 0
     @word_list = wordlist
     @report_every = report_every
+    @timer = Timer.new(:seconds)
   end
 
   def crack!(target_hash)
 
+    ## Start the Timer
+    @timer.start!
 
     while true
+
       ## Pending message every 10 tries
       self.try_a_word
       self.report_still_working
@@ -32,6 +36,7 @@ class PassCracker
   def reset!
     @num_tries = 0
     @word_list =  WordList.new
+    @timer.reset!
   end
 
   def successfully_cracked?(phrase, target_hash)
@@ -40,7 +45,10 @@ class PassCracker
     attempt_hash = WordList.hash_this_ phrase
 
     if self.cracked?(attempt_hash, target_hash)
-      puts "Cracked!"
+      @timer.stop!
+      time_elapsed = @timer.time_elapsed
+
+      puts "Cracked password in #{@num_tries}, time elapsed: #{time_elapsed}"
       puts "The password is #{phrase}"
       true
     else
@@ -61,12 +69,12 @@ class PassCracker
   end
 
   def report_still_working
-    message = "Attempt no. #{@num_tries} to crack password..."
+    message = "#{@num_tries} attempts to crack password, no luck..."
     puts message if (@num_tries % @report_every).eql? 0
   end
 
   def report_not_cracked(phrase)
-    puts "Tried #{phrase}, not a match. Still trying to crack..."
+    puts "Try no. #{@num_tries} | #{phrase} | NO MATCH"
   end
 
 end
