@@ -4,15 +4,14 @@
     <list default="true" id="e780dccb-0c29-4195-af3a-0c10f5acaa6a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pass_cracker.rb" afterPath="$PROJECT_DIR$/models/pass_cracker.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple_pass_cracker.rb" afterPath="$PROJECT_DIR$/simple_pass_cracker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/word_list.rb" afterPath="$PROJECT_DIR$/models/word_list.rb" />
     </list>
     <ignored path="brute_force_pass_cracker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441777991818" ignored="false" />
-    <file path="/simple_pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441775002849" ignored="false" />
+    <file path="/simple_pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441780664544" ignored="false" />
     <file path="/Gemfile.lock" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441772920368" ignored="false" />
     <file path="/Gemfile" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441775297318" ignored="false" />
-    <file path="/pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441780033557" ignored="false" />
+    <file path="/pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441780552031" ignored="false" />
     <file path="/word_list_generator.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441776021066" ignored="false" />
     <file path="/word_list.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441776948886" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="simple_pass_cracker.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="simple_pass_cracker.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="35" selection-start="374" selection-end="406" vertical-scroll-proportion="0.0">
+            <state line="21" column="9" selection-start="476" selection-end="476" vertical-scroll-proportion="0.81606215">
               <folding />
             </state>
           </provider>
@@ -52,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pass_cracker.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pass_cracker.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/pass_cracker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="54" selection-start="498" selection-end="498" vertical-scroll-proportion="0.81606215">
+            <state line="13" column="45" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,8 +104,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/models/word_list_generator.rb" />
         <option value="$PROJECT_DIR$/models/word_list.rb" />
-        <option value="$PROJECT_DIR$/simple_pass_cracker.rb" />
         <option value="$PROJECT_DIR$/models/pass_cracker.rb" />
+        <option value="$PROJECT_DIR$/simple_pass_cracker.rb" />
       </list>
     </option>
   </component>
@@ -565,16 +564,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
+    <entry file="file://$PROJECT_DIR$/models/pass_cracker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="374" selection-end="406" vertical-scroll-proportion="0.0">
+        <state line="13" column="45" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/pass_cracker.rb">
+    <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="54" selection-start="498" selection-end="498" vertical-scroll-proportion="0.81606215">
+        <state line="21" column="9" selection-start="476" selection-end="476" vertical-scroll-proportion="0.81606215">
           <folding />
         </state>
       </provider>

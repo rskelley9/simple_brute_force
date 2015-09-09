@@ -9,8 +9,8 @@ class PassCracker
     self.report_every = report_every
   end
 
-  def crack!(target_word)
-    target_hash = Digest::MD5.hexdigest(target_word)
+  def crack!(target_hash)
+
 
     while true
       ## Pending message every 10 tries
@@ -61,14 +61,12 @@ class PassCracker
   end
 
   def report_still_working
-    message = "Cracking password..."
+    message = "Attempt no. #{self.num_tries} to crack password..."
     puts message if (self.num_tries % self.report_every).eql? 0
   end
 
   def report_not_cracked(phrase)
     puts "Tried #{phrase}, not a match. Still trying to crack..."
   end
-
-
 
 end
