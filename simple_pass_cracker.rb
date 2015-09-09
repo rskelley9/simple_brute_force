@@ -11,7 +11,7 @@ if ARGV[0]
 	target_hash = ARGV[0]
 else
 #	target_hash = '098f6bcd4621d373cade4e832627b4f6'
-target_hash = Digest::MD5.hexdigest("axel")
+target_hash = Digest::MD5.hexdigest("snoo")
 end
 
 word_list = GentleBrute::BruteForcer.new
