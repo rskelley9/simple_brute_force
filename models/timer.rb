@@ -24,7 +24,7 @@ class Timer
   def time_elapsed
     return (0 * @interval) if @start_time.nil?
 
-    (@start_time - @end_time) * @interval
+    (@end_time - @start_time) * @interval
   end
 
 

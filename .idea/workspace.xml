@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e780dccb-0c29-4195-af3a-0c10f5acaa6a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pass_cracker.rb" afterPath="$PROJECT_DIR$/models/pass_cracker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple_pass_cracker.rb" afterPath="$PROJECT_DIR$/simple_pass_cracker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/timer.rb" afterPath="$PROJECT_DIR$/models/timer.rb" />
     </list>
     <ignored path="brute_force_pass_cracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,11 +11,11 @@
     <file path="/simple_pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441784027091" ignored="false" />
     <file path="/Gemfile.lock" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441772920368" ignored="false" />
     <file path="/Gemfile" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441775297318" ignored="false" />
-    <file path="/pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441784412687" ignored="false" />
+    <file path="/pass_cracker.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441784606131" ignored="false" />
     <file path="/word_list_generator.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441776021066" ignored="false" />
     <file path="/word_list.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441781607730" ignored="false" />
-    <file path="/timer.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441783704997" ignored="false" />
-    <file path="/Ruby Console" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441783375963" ignored="false" />
+    <file path="/timer.rb" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441784759981" ignored="false" />
+    <file path="/Ruby Console" changelist="e780dccb-0c29-4195-af3a-0c10f5acaa6a" time="1441785388090" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
       <file leaf-file-name="simple_pass_cracker.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="3" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+            <state line="19" column="1" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -57,7 +56,7 @@
       <file leaf-file-name="pass_cracker.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/pass_cracker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="6" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.42746115">
+            <state line="16" column="4" selection-start="307" selection-end="307" vertical-scroll-proportion="0.42746115">
               <folding />
             </state>
           </provider>
@@ -66,7 +65,7 @@
       <file leaf-file-name="timer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/timer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="71" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+            <state line="27" column="42" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,8 +115,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/models/word_list_generator.rb" />
         <option value="$PROJECT_DIR$/models/word_list.rb" />
-        <option value="$PROJECT_DIR$/models/timer.rb" />
         <option value="$PROJECT_DIR$/simple_pass_cracker.rb" />
+        <option value="$PROJECT_DIR$/models/timer.rb" />
         <option value="$PROJECT_DIR$/models/pass_cracker.rb" />
       </list>
     </option>
@@ -297,7 +296,7 @@
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.IRB console">
+  <component name="RunManager" selected="Ruby.simple_pass_cracker">
     <configuration default="false" name="simple_pass_cracker" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="brute_force_pass_cracker" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -445,9 +444,10 @@
       <item index="1" class="java.lang.String" itemvalue="IRB console.IRB console" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.simple_pass_cracker" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Ruby.simple_pass_cracker" />
+        <item index="1" class="java.lang.String" itemvalue="IRB console.IRB console" />
+        <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console" />
       </list>
     </recent_temporary>
   </component>
@@ -517,7 +517,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1260" height="714" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -530,7 +530,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24958813" sideWeight="0.6709887" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987034" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -616,6 +616,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/word_list.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="11" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
@@ -623,23 +630,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple_pass_cracker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="3" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/timer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="71" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+        <state line="27" column="42" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/pass_cracker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="6" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.42746115">
+        <state line="16" column="4" selection-start="307" selection-end="307" vertical-scroll-proportion="0.42746115">
           <folding />
         </state>
       </provider>
