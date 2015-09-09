@@ -2,10 +2,11 @@ require 'digest/md5'
 require 'gentle_brute'
 
 class PassCracker
+
   def initialize(wordlist=WordList.new, report_every=10)
-  self.num_tries = 0
-  self.wordlist = wordlist
-  self.report_every = report_every
+    self.num_tries = 0
+    self.wordlist = wordlist
+    self.report_every = report_every
   end
 
   def crack!(target_word)
@@ -14,22 +15,16 @@ class PassCracker
     while true
       ## Pending message every 10 tries
       self.try_a_word
-      self.report_results
+      self.report_still_working
 
       ## Use a word from word list to test
-      phrase = word_list.next_valid_phrase
-      ## Hash that word to compare to password hash
-      attempt_hash = Digest::MD5.hexdigest(phrase)
+      phrase = self.word_list.next_valid_phrase
 
       ## If the hashes match, print the unhashed phrase (password)
-      if attempt_hash == target_hash
-        puts "Cracked!"
-        puts "Password is #{phrase}"
-      end
+      break if self.successfully_cracked?(phrase, target_hash)
 
-      break if attempt_hash == target_hash
-      puts "Tried #{phrase}, not a match. Still trying to crack..."
-
+      # After each loop, report progress
+      self.report_not_cracked
     end
 
   end
@@ -37,6 +32,20 @@ class PassCracker
   def reset!
     self.num_tries = 0
     self.wordlist =  WordList.new
+  end
+
+  def successfully_cracked?(phrase, target_hash)
+
+    ## Hash that word to compare to password hash
+    attempt_hash = WordList.hash_this_ phrase
+
+    if self.cracked?(attempt_hash, target_hash)
+      puts "Cracked!"
+      puts "The password is #{phrase}"
+      true
+    else
+      false
+    end
   end
 
   def try_a_word
@@ -47,8 +56,17 @@ class PassCracker
     self.autoreport_interval=number
   end
 
-  def report_results
+  def cracked?(guess, target)
+    guess == target
+  end
+
+  def report_still_working
+    message = "Cracking password..."
     puts message if (self.num_tries % self.report_every).eql? 0
+  end
+
+  def report_not_cracked(phrase)
+    puts "Tried #{phrase}, not a match. Still trying to crack..."
   end
 
 
