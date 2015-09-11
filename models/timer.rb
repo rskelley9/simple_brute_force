@@ -9,11 +9,14 @@ class Timer
   end
 
   def start!
+    puts "restarted timer" if @start_time
+
     @start_time = Time.now
+    @end_time = nil
   end
 
   def stop!
-    @end_time = Time.now
+    @end_time ||= Time.now
   end
 
   def reset!
