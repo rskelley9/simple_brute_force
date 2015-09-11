@@ -11,14 +11,15 @@ class PassCracker
   end
 
   def crack!(target_hash)
-
+    ## Reset the statistics automatically
+    self.reset!
     ## Start the Timer
     @timer.start!
 
     while true
 
       ## Pending message every 10 tries
-      self.try_a_word
+      self.try_a_word!
       self.report_still_working
 
       ## Use a word from word list to test
@@ -35,7 +36,7 @@ class PassCracker
 
   def reset!
     @num_tries = 0
-    @word_list =  WordList.new
+    @word_list.regenerate!
     @timer.reset!
   end
 
@@ -47,26 +48,30 @@ class PassCracker
     if self.cracked?(attempt_hash, target_hash)
       @timer.stop!
       time_elapsed = @timer.time_elapsed
-
-      puts "Cracked password in #{@num_tries}, time elapsed: #{time_elapsed}"
-      puts "The password is #{phrase}"
+      self.report_successful(phrase, time_elapsed)
       true
     else
       false
     end
   end
 
-  def try_a_word
+  def try_a_word!
     @num_tries += 1
+  end
+
+  def cracked?(guess, target)
+    guess == target
+  end
+
+  def report_successful(phrase, time_elapsed)
+      puts "Cracked password in #{@num_tries} tries, time elapsed: #{time_elapsed}"
+      puts "The password is #{phrase}."
   end
 
   def set_auto_report_interval! number
     self.autoreport_interval=number
   end
 
-  def cracked?(guess, target)
-    guess == target
-  end
 
   def report_still_working
     message = "#{@num_tries} attempts to crack password, no luck..."
