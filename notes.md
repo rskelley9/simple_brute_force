@@ -12,13 +12,22 @@ $ bundle install
 
 ```
 
-Crack Test Password
-
+Try it hashing the password "doge" and then cracking it
 ```
-$ ruby simple_pass_cracker.rb [password hash]
+# Hash a Password and Copy to clipboard
+$ echo -n "doge" | openssl md5 | sed 's/^.* //' | pbcopy
+
+# Crack Hashed Password
+ruby simple_pass_cracker -h 03ea345ce429b6581d7c28c33305c2b6
 ```
 
-Test Gentle Brute:
+You can also pass in a four-letter word and have the program hash it for you
+```
+# Pass in a four-letter string to be hashed and cracked
+ruby simple+pass_cracker -p "doge"
+```
+
+Try out Gentle Brute from the Command Line:
 ```
 $ wget https://raw.github.com/jamespenguin/gentle-brute/master/passwords.txt
 

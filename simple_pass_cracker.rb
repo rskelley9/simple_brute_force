@@ -3,40 +3,32 @@
 require 'digest/md5'
 require 'gentle_brute'
 
-## Example
-# target_hash = Digest::MD5.hexdigest("poop")
+# require all models
+Dir["./models/*.rb"].each {|file| require file }
 
-# Set default password hash if user doesn't enter one
-if ARGV[0]
-	target_hash = ARGV[0]
-else
-#	target_hash = '098f6bcd4621d373cade4e832627b4f6'
-target_hash = Digest::MD5.hexdigest("snoo")
+## Try a test hash
+# target_hash = Digest::MD5.hexdigest("doge")
+
+## If user doesn't enter an argument, terminate
+if ARGV[0].nil?
+  puts "syntax: ruby simple_pass_cracker.rb -p <password>"
+  puts "syntax: ruby simple_pass_cracker.rb -h <hashed password>"
+  exit
 end
 
-word_list = GentleBrute::BruteForcer.new
-
-message = "Cracking password..."
-puts message
-num_tries = 0
-
-while true
-	## Pending message every 10 tries
-	num_tries += 1
-	puts message if (num_tries % 10).eql? 0
-
-	## Use a word from word list to test
-	phrase = word_list.next_valid_phrase
-  ## Hash that word to compare to password hash
-  attempt_hash = Digest::MD5.hexdigest(phrase)
-
-  ## If the hashes match, print the unhashed phrase (password)
-  if attempt_hash == target_hash
-  	puts "Cracked!"
-  	puts "Password is #{phrase}"
-  end
-
-  break if attempt_hash == target_hash
-  puts "Tried #{phrase}, not a match. Still trying to crack..."
-
+## If -h flag, hash it, if -p flag, don't and treat as password
+if ARGV[0] == "-p"
+	target_hash = Digest::MD5.hexdigest(ARGV[1])
+elsif ARGV[0] == "-h"
+  target_hash = ARGV[1]
 end
+
+puts target_hash
+
+word_list = WordList.new
+
+# Pass a custom wordlist into the PassCracker (optional)
+password_cracker = PassCracker.new(word_list)
+
+# Crack the hashed password
+password_cracker.crack!(target_hash)
