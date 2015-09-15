@@ -41,4 +41,7 @@ To-do List
 
 Links
 -----
-*
+* [gentle_brute](https://github.com/jamespenguin/gentle-brute)
+* [IT Security Tools](https://github.com/rskelley9/it-security-tools)
+* [Encryption vs. Hashing](https://github.com/rskelley9/simple_brute_force/blob/master/encoding_vs_encryption_vs_hashing.txt)
+
