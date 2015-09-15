@@ -1,5 +1,7 @@
 class Timer
 
+  attr_reader :start_time, :end_time, :interval
+
   @@timescales = {milliseconds: 1000.0, seconds: 1.0, minutes: 1.0/60.0}
 
   def initialize(interval=:milliseconds)
@@ -15,7 +17,7 @@ class Timer
     @end_time = nil
   end
 
-  def stop!
+  def stop
     @end_time ||= Time.now
   end
 

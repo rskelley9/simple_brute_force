@@ -2,6 +2,7 @@ require 'digest/md5'
 require 'gentle_brute'
 
 class PassCracker
+  attr_reader :num_tries, :report_every, :timer
 
   def initialize(wordlist=WordList.new, report_every=10)
     @num_tries = 0
@@ -46,7 +47,7 @@ class PassCracker
     attempt_hash = WordList.hash_this_ phrase
 
     if self.cracked?(attempt_hash, target_hash)
-      @timer.stop!
+      @timer.stop
       time_elapsed = @timer.time_elapsed
       self.report_successful(phrase, time_elapsed)
       true
