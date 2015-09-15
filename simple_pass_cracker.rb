@@ -6,12 +6,24 @@ require 'gentle_brute'
 # require all models
 Dir["./models/*.rb"].each {|file| require file }
 
-# Set default password and hash it if user doesn't enter one
-if ARGV[0]
-  target_hash = Digest::MD5.hexdigest(ARGV[0])
-else
-  target_hash = Digest::MD5.hexdigest("axel")
+## Try a test hash
+# target_hash = Digest::MD5.hexdigest("doge")
+
+## If user doesn't enter an argument, terminate
+if ARGV[0].nil?
+  puts "syntax: ruby simple_pass_cracker.rb -p <password>"
+  puts "syntax: ruby simple_pass_cracker.rb -h <hashed password>"
+  exit
 end
+
+## If -h flag, hash it, if -p flag, don't and treat as password
+if ARGV[0] == "-p"
+	target_hash = Digest::MD5.hexdigest(ARGV[1])
+elsif ARGV[0] == "-h"
+  target_hash = ARGV[1]
+end
+
+puts target_hash
 
 word_list = WordList.new
 
