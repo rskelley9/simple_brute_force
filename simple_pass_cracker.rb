@@ -6,8 +6,6 @@ require 'gentle_brute'
 # require all models
 Dir["./models/*.rb"].each {|file| require file }
 
-## Example
-
 # Set default password and hash it if user doesn't enter one
 if ARGV[0]
   target_hash = Digest::MD5.hexdigest(ARGV[0])

@@ -4,23 +4,21 @@ require File.expand_path("../../models/timer", __FILE__)
 class TestTimer < Minitest::Test
 
 	def setup
-		@timer = Timer.new
+		@timer = Timer.new(:milliseconds)
+		@timer.start!
+		@timer.stop
 	end
 
 	def test_default_times_are_nil
-		assert_nil @timer.start_time
-		assert_nil @timer.end_time
+		assert_nil Timer.new.start_time
+		assert_nil Timer.new.end_time
 	end
 
-	def test_start_time_is_kind_of_time_after_start
-		@timer.start!
+	def test_start_time_is_kind_of_time
 		assert_kind_of Time, @timer.start_time
 	end
 
 	def test_start_time_is_more_recent_than_end_time_when_timer_is_stopped
-		@timer.start!
-		sleep(0.5)
-		@timer.stop
 		assert @timer.start_time < @timer.end_time
 	end
 
@@ -29,9 +27,6 @@ class TestTimer < Minitest::Test
 	end
 
 	def test_time_elapsed_greater_than_zero_after_stop
-		@timer.start!
-		sleep(0.5)
-		@timer.stop
 		assert @timer.time_elapsed > 0
 	end
 

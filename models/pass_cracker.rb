@@ -2,6 +2,7 @@ require 'digest/md5'
 require 'gentle_brute'
 
 class PassCracker
+  attr_reader :num_tries, :report_every, :timer
 
   def initialize(wordlist=WordList.new, report_every=10)
     @num_tries = 0
