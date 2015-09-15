@@ -46,7 +46,7 @@ class PassCracker
     attempt_hash = WordList.hash_this_ phrase
 
     if self.cracked?(attempt_hash, target_hash)
-      @timer.stop!
+      @timer.stop
       time_elapsed = @timer.time_elapsed
       self.report_successful(phrase, time_elapsed)
       true
